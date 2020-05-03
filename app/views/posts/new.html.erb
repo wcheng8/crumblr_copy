@@ -1,15 +1,17 @@
-<h1>Make Something</h1>
+<div id="page_wrapper">
+  <h1>Make Something</h1>
 
-<%= form_with(model:@post, local: true) do |f| %>
-  <p>
-    <%=f.label :title%><br>
-    <%=f.text_field :title%>
-  </p>
+  <%= form_with(model:@post, local: true) do |f| %>
     <p>
-    <%=f.label :body%><br>
-    <%=f.text_field :body%>
-  </p>
-  <div>
-    <%=f.submit%>    
-  </div>
-<% end %>
+      <%=f.label :title%><br>
+      <%=f.text_field :title%>
+    </p>
+      <p>
+      <%=f.label :body%><br>
+      <%=f.text_field :body%>
+    </p>
+    <div>
+      <%=f.submit%>    
+    </div>
+  <% end %>
+</div>

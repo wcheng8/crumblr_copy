@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'comments/create'
+  get '/about', to: 'pages#about', as: "about"
   resources :posts do
     resources :comments
   end

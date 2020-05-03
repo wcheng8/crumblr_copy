@@ -1,27 +1,5 @@
 <div id="page_wrapper">
   <h1>Make Something</h1>
 
-  <%= form_with(model:@post, local: true) do |f| %>
-    <% if @post.errors.any? %>
-      <div id="errors">
-      <h2><%=pluralize(@post.errors.count, "errors")%> stopped this post from saving</h2>
-        <ul>
-          <%@post.errors.full_messages.each do |msg|%>
-          <li><%=msg%></li>
-          <% end %>
-        </ul>
-      </div>      
-    <% end %>
-    <p>
-      <%=f.label :title%><br>
-      <%=f.text_field :title%>
-    </p>
-      <p>
-      <%=f.label :body%><br>
-      <%=f.text_field :body%>
-    </p>
-    <div>
-      <%=f.submit%>    
-    </div>
-  <% end %>
+  <%= render 'form' %>
 </div>
